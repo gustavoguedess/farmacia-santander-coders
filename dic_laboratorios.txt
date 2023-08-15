@@ -1,0 +1,1 @@
+{'ARM': {'endereço': 'Rua Remedio', 'telefone': '47 99999999', 'cidade': 'Joinville', 'estado': 'SC'}}
