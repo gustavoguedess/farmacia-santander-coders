@@ -1,6 +1,6 @@
-from medicamento_fitoterapico import MedicamentoFitoterapico
+from medicamento import Medicamento
 
-class MedicamentoQuimioterapico(MedicamentoFitoterapico):
+class MedicamentoQuimioterapico(Medicamento):
     def __init__(self, nome, principal_composto, laboratorio, descricao, preco, controlado=True):
         super().__init__(nome, principal_composto, laboratorio, descricao, preco)
         self._controlado : bool = controlado
