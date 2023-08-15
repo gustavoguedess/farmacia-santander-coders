@@ -1,0 +1,30 @@
+{
+    "ARM": {
+        "id": 0,
+        "endereco": "ARM",
+        "telefone": "47 99999999",
+        "cidade": "Joinville",
+        "estado": "SC"
+    },
+    "URI": {
+        "id": 1,
+        "endereco": "URI",
+        "telefone": "47 99999999",
+        "cidade": "Joinville",
+        "estado": "SC"
+    },
+    "0": {
+        "nome": "ARM",
+        "endereco": "Rua Remedio",
+        "telefone": "47 99999999",
+        "cidade": "Joinville",
+        "estado": "SC"
+    },
+    "1": {
+        "nome": "URI",
+        "endereco": "Rua Remedio",
+        "telefone": "47 99999999",
+        "cidade": "Joinville",
+        "estado": "SC"
+    }
+}
