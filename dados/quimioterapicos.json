@@ -1,0 +1,43 @@
+[
+    {
+      "nome": "Amoxicilina",
+      "principal_composto": "Amoxicilina",
+      "laboratorio": "PharmaCare",
+      "descricao": "Antibiótico para infecções bacterianas.",
+      "preco": 12.0,
+      "controlado": false
+    },
+    {
+      "nome": "Lisinopril",
+      "principal_composto": "Lisinopril",
+      "laboratorio": "HeartMed",
+      "descricao": "Trata hipertensão e insuficiência cardíaca.",
+      "preco": 7.5,
+      "controlado": false
+    },
+    {
+      "nome": "Ibuprofeno",
+      "principal_composto": "Ibuprofeno",
+      "laboratorio": "PainRelief",
+      "descricao": "Anti-inflamatório e analgésico.",
+      "preco": 5.0,
+      "controlado": false
+    },
+    {
+      "nome": "Levothyroxine",
+      "principal_composto": "Levothyroxine",
+      "laboratorio": "ThyroidPharm",
+      "descricao": "Tratamento para hipotireoidismo.",
+      "preco": 18.5,
+      "controlado": false
+    },
+    {
+      "nome": "Alprazolam",
+      "principal_composto": "Alprazolam",
+      "laboratorio": "MentalHealth",
+      "descricao": "Ansiolítico para transtornos de ansiedade.",
+      "preco": 22.0,
+      "controlado": true
+    }
+  ]
+  
