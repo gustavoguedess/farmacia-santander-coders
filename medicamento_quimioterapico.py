@@ -12,3 +12,13 @@ class MedicamentoQuimioterapico(Medicamento):
     @controlado.setter
     def controlado(self, controlado):
         self._controlado = controlado
+    
+    # Outras funções
+    def to_string(self):
+        print(f"Nome: {self._nome}")
+        print(f"Principal composto: {self._principal_composto}")
+        print(f"Laboratório: {self._laboratorio.nome}")
+        print(f"Descrição: {self._descricao}")
+        print(f"Preço: {self._preco}")
+        print(f"Preço: {'Sim' if self._controlado else 'Não'}")
+        print(f"ID: {self._id}")
