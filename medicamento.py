@@ -1,10 +1,15 @@
+import itertools
+
 class Medicamento:
+    id_iter = itertools.count()
+
     def __init__(self, nome, principal_composto, laboratorio, descricao, preco):
         self._nome : str = nome
         self._principal_composto : str = principal_composto
         self._laboratorio : str = laboratorio
         self._descricao : str = descricao
         self._preco : float = preco
+        self._id = next(self.id_iter)
     
     # Getters
     @property
@@ -27,6 +32,10 @@ class Medicamento:
     def preco(self):
         return self._preco
     
+    @property
+    def id(self):
+        return self._id
+    
     # Setters
     @nome.setter
     def nome(self, nome):
@@ -47,3 +56,12 @@ class Medicamento:
     @preco.setter
     def preco(self, descricao):
         self._preco = preco
+        
+    # Outras funções
+    def to_string(self):
+        print(f"Nome: {self._nome}")
+        print(f"Principal composto: {self._principal_composto}")
+        print(f"Laboratório: {self._laboratorio}")
+        print(f"Descrição: {self._descricao}")
+        print(f"Preço: {self._preco}")
+        print(f"ID: {self._id}")
