@@ -15,10 +15,10 @@ class MedicamentoQuimioterapico(Medicamento):
     
     # Outras funções
     def to_string(self):
-        print(f"Nome: {self._nome}")
-        print(f"Principal composto: {self._principal_composto}")
-        print(f"Laboratório: {self._laboratorio.nome}")
-        print(f"Descrição: {self._descricao}")
-        print(f"Preço: {self._preco}")
-        print(f"Preço: {'Sim' if self._controlado else 'Não'}")
-        print(f"ID: {self._id}")
+        return f"{super().to_string()} - {self._controlado}"
+    
+    @property
+    def dados_medicamento(self):
+        dados_medicamento = super().dados_medicamento
+        dados_medicamento["controlado"] = self._controlado
+        return dados_medicamento

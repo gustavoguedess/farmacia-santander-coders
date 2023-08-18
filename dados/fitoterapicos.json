@@ -1,38 +1,42 @@
 [
     {
-      "nome": "Valeriana",
-      "principal_composto": "Ácido Valerênico",
-      "laboratorio": "Fitoterápica Ltda.",
-      "descricao": "Indicado para ansiedade e insônia.",
-      "preco": 25.99
+        "id": 0,
+        "nome": "Valeriana",
+        "principal_composto": "\u00c1cido Valer\u00eanico",
+        "laboratorio": "Fitoter\u00e1pica Ltda.",
+        "descricao": "Indicado para ansiedade e ins\u00f4nia.",
+        "preco": 25.99
     },
     {
-      "nome": "Echinacea",
-      "principal_composto": "Echinacoside",
-      "laboratorio": "NatureMed",
-      "descricao": "Fortalece o sistema imunológico.",
-      "preco": 15.50
+        "id": 1,
+        "nome": "Echinacea",
+        "principal_composto": "Echinacoside",
+        "laboratorio": "NatureMed",
+        "descricao": "Fortalece o sistema imunol\u00f3gico.",
+        "preco": 15.5
     },
     {
-      "nome": "Ginkgo Biloba",
-      "principal_composto": "Flavonoides e Terpenoides",
-      "laboratorio": "HerbLife",
-      "descricao": "Melhora a circulação cerebral e a memória.",
-      "preco": 19.75
+        "id": 2,
+        "nome": "Ginkgo Biloba",
+        "principal_composto": "Flavonoides e Terpenoides",
+        "laboratorio": "HerbLife",
+        "descricao": "Melhora a circula\u00e7\u00e3o cerebral e a mem\u00f3ria.",
+        "preco": 19.75
     },
     {
-      "nome": "Cáscara Sagrada",
-      "principal_composto": "Antraquinonas",
-      "laboratorio": "NaturPharma",
-      "descricao": "Auxilia no funcionamento do intestino.",
-      "preco": 12.30
+        "id": 3,
+        "nome": "C\u00e1scara Sagrada",
+        "principal_composto": "Antraquinonas",
+        "laboratorio": "NaturPharma",
+        "descricao": "Auxilia no funcionamento do intestino.",
+        "preco": 12.3
     },
     {
-      "nome": "Hortelã-Pimenta",
-      "principal_composto": "Mentol",
-      "laboratorio": "HerbEssentials",
-      "descricao": "Alivia problemas digestivos e gases.",
-      "preco": 8.99
+        "id": 4,
+        "nome": "Hortel\u00e3-Pimenta",
+        "principal_composto": "Mentol",
+        "laboratorio": "HerbEssentials",
+        "descricao": "Alivia problemas digestivos e gases.",
+        "preco": 8.99
     }
-  ]
-  
+]

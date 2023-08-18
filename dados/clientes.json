@@ -1,14 +1,14 @@
-{
-    "123456789": {
+[
+    {
         "cpf": "123456789",
         "nome": "Pedro",
         "sobrenome": "Ferrari",
         "data_nascimento": "10/10/1998"
     },
-    "987654321": {
+    {
         "cpf": "987654321",
         "nome": "Thiago",
         "sobrenome": "Anamastor",
         "data_nascimento": "21/12/1976"
     }
-}
+]

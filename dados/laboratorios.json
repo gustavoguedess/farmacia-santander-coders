@@ -1,18 +1,18 @@
-{
-    "0": {
-        "id": "0",
+[
+    {
+        "id": 0,
         "nome": "ARM",
         "endereco": "Rua Remedio",
         "telefone": "47 99999999",
         "cidade": "Joinville",
         "estado": "SC"
     },
-    "1": {
-        "id": "1",
+    {
+        "id": 1,
         "nome": "URI",
         "endereco": "Rua Remedio",
         "telefone": "47 99999999",
         "cidade": "Joinville",
         "estado": "SC"
     }
-}
+]

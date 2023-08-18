@@ -1,43 +1,47 @@
 [
     {
-      "nome": "Amoxicilina",
-      "principal_composto": "Amoxicilina",
-      "laboratorio": "PharmaCare",
-      "descricao": "Antibiótico para infecções bacterianas.",
-      "preco": 12.0,
-      "controlado": false
+        "id": 5,
+        "nome": "Amoxicilina",
+        "principal_composto": "Amoxicilina",
+        "laboratorio": "PharmaCare",
+        "descricao": "Antibi\u00f3tico para infec\u00e7\u00f5es bacterianas.",
+        "preco": 12.0,
+        "controlado": false
     },
     {
-      "nome": "Lisinopril",
-      "principal_composto": "Lisinopril",
-      "laboratorio": "HeartMed",
-      "descricao": "Trata hipertensão e insuficiência cardíaca.",
-      "preco": 7.5,
-      "controlado": false
+        "id": 6,
+        "nome": "Lisinopril",
+        "principal_composto": "Lisinopril",
+        "laboratorio": "HeartMed",
+        "descricao": "Trata hipertens\u00e3o e insufici\u00eancia card\u00edaca.",
+        "preco": 7.5,
+        "controlado": false
     },
     {
-      "nome": "Ibuprofeno",
-      "principal_composto": "Ibuprofeno",
-      "laboratorio": "PainRelief",
-      "descricao": "Anti-inflamatório e analgésico.",
-      "preco": 5.0,
-      "controlado": false
+        "id": 7,
+        "nome": "Ibuprofeno",
+        "principal_composto": "Ibuprofeno",
+        "laboratorio": "PainRelief",
+        "descricao": "Anti-inflamat\u00f3rio e analg\u00e9sico.",
+        "preco": 5.0,
+        "controlado": false
     },
     {
-      "nome": "Levothyroxine",
-      "principal_composto": "Levothyroxine",
-      "laboratorio": "ThyroidPharm",
-      "descricao": "Tratamento para hipotireoidismo.",
-      "preco": 18.5,
-      "controlado": false
+        "id": 8,
+        "nome": "Levothyroxine",
+        "principal_composto": "Levothyroxine",
+        "laboratorio": "ThyroidPharm",
+        "descricao": "Tratamento para hipotireoidismo.",
+        "preco": 18.5,
+        "controlado": false
     },
     {
-      "nome": "Alprazolam",
-      "principal_composto": "Alprazolam",
-      "laboratorio": "MentalHealth",
-      "descricao": "Ansiolítico para transtornos de ansiedade.",
-      "preco": 22.0,
-      "controlado": true
+        "id": 9,
+        "nome": "Alprazolam",
+        "principal_composto": "Alprazolam",
+        "laboratorio": "MentalHealth",
+        "descricao": "Ansiol\u00edtico para transtornos de ansiedade.",
+        "preco": 22.0,
+        "controlado": true
     }
-  ]
-  
+]

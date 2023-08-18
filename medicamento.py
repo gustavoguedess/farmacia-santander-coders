@@ -11,6 +11,20 @@ class Medicamento:
         self._preco : float = preco
         self._id = next(self.id_iter)
     
+    def __str__(self):
+        return f"{self._nome} - {self._principal_composto} - {self._laboratorio} - {self._descricao} - {self._preco} - {self._id}"
+    
+    @property
+    def dados_medicamento(self):
+        return {
+            "id": self.id,
+            "nome": self._nome,
+            "principal_composto": self._principal_composto,
+            "laboratorio": self._laboratorio,
+            "descricao": self._descricao,
+            "preco": self._preco
+        }
+    
     # Getters
     @property
     def nome(self):

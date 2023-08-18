@@ -7,6 +7,9 @@ class Cliente:
         self._sobrenome: str = sobrenome
         self._data_nascimento: str = data_nascimento
 
+    def __str__(self):
+        return f"{self.cpf} - {self._nome} - {self._sobrenome} - {self._data_nascimento}"
+
     @property
     def dados_cliente(self):
         return {
