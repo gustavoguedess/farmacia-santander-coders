@@ -1,17 +1,16 @@
 from cliente import Cliente
-from produto import Produto
+from medicamento import Medicamento
 from datetime import datetime
 
 class Venda:
-    def __init__(self, cliente: Cliente, produtos: list[Produto]):
+    def __init__(self, cliente: Cliente, medicamentos: list[Medicamento]):
         self.cliente = cliente
-        self.produtos = produtos
+        self.medicamentos = medicamentos
+        self.compra_efeituada = False
         self.datetime = None
 
-        self.checar_produtos()
         self.calcular_total(desconto=0.0)
-
-        self.compra_efeituada = False
+        self.efetuar_compra()
 
     def verificar_produto(self, id_produto: int):
         verificado = False
@@ -22,14 +21,14 @@ class Venda:
         return verificado
 
     def efetuar_compra(self):
-        if self.checar_produtos():
+        if self.checar_medicamentos():
             self.compra_efeituada = True
             self.datatime = datetime.now()
             print("Compra efetuada com sucesso!")
         else:
-            print("Não foi possível efetuar a compra!")
+            print("Não foi possível efetuar a compra, verifique os medicamentos necessários!")
     
-    def checar_produtos(self):
+    def checar_medicamentos(self):
         possui_controlados = False
 
         for produto in self.produtos:
