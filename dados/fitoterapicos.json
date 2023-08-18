@@ -1,0 +1,38 @@
+[
+    {
+      "nome": "Valeriana",
+      "principal_composto": "Ácido Valerênico",
+      "laboratorio": "Fitoterápica Ltda.",
+      "descricao": "Indicado para ansiedade e insônia.",
+      "preco": 25.99
+    },
+    {
+      "nome": "Echinacea",
+      "principal_composto": "Echinacoside",
+      "laboratorio": "NatureMed",
+      "descricao": "Fortalece o sistema imunológico.",
+      "preco": 15.50
+    },
+    {
+      "nome": "Ginkgo Biloba",
+      "principal_composto": "Flavonoides e Terpenoides",
+      "laboratorio": "HerbLife",
+      "descricao": "Melhora a circulação cerebral e a memória.",
+      "preco": 19.75
+    },
+    {
+      "nome": "Cáscara Sagrada",
+      "principal_composto": "Antraquinonas",
+      "laboratorio": "NaturPharma",
+      "descricao": "Auxilia no funcionamento do intestino.",
+      "preco": 12.30
+    },
+    {
+      "nome": "Hortelã-Pimenta",
+      "principal_composto": "Mentol",
+      "laboratorio": "HerbEssentials",
+      "descricao": "Alivia problemas digestivos e gases.",
+      "preco": 8.99
+    }
+  ]
+  
