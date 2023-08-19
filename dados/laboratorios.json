@@ -14,5 +14,13 @@
         "telefone": "47 99999999",
         "cidade": "Joinville",
         "estado": "SC"
+    },
+    {
+        "id": 2,
+        "nome": "Lab legal",
+        "endereco": "av daora",
+        "telefone": "12345678",
+        "cidade": "curitiba",
+        "estado": "paran\u00e1"
     }
 ]

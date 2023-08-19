@@ -11,7 +11,7 @@ class Laboratorio:
         self._estado: str = estado
     
     def __str__(self):
-        return f"{self._nome} - {self._endereco} - {self._telefone} - {self._cidade} - {self._estado}"
+        return f"{self.id} - {self._nome} - {self._endereco} - {self._telefone} - {self._cidade} - {self._estado}"
 
     @property
     def dados_laboratorio(self):

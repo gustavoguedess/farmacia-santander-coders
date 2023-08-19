@@ -62,7 +62,7 @@ class Farmacia:
         self._clientes[cliente.cpf] = cliente
     
     def add_medicamento(self, medicamento: Medicamento):
-        self._medicamentos[medicamento.id] = medicamento
+        self._medicamentos[medicamento.nome] = medicamento
 
     def vender(self, id_cliente: int, id_medicamentos: list[int]):
         cliente = self._clientes[id_cliente]
@@ -70,7 +70,21 @@ class Farmacia:
         for id_medicamento in id_medicamentos:
             medicamentos.append(self._medicamentos[id_medicamento])
         venda = Venda(cliente, medicamentos)
-        self._vendas[venda.id] = venda
+
+        print(venda)
+
+        if venda.possui_controlado:
+            receita_apresentada = input("O cliente apresentou a receita médica (S/N): ")
+            receita_apresentada = receita_apresentada.upper()
+            if receita_apresentada == "S":
+                venda.efetuar_compra()
+                self._vendas[venda.id] = venda
+            else:
+                print("Compra não efetuada!")
+        else:
+            venda.efetuar_compra()
+            self._vendas[venda.id] = venda
+
         return venda
     
     def carregar_laboratorios(self, path: str):
@@ -100,7 +114,15 @@ class Farmacia:
         with open(path + "vendas.json", "r") as file:
             vendas = json.load(file)
             for venda in vendas:
-                self.vender(venda["cliente"], venda["medicamentos"])
+                cliente = self._clientes[venda["cpf_cliente"]]
+                medicamentos = []
+                for id_medicamento in venda["medicamentos"]:
+                    medicamentos.append(self._medicamentos[id_medicamento])
+                _venda = Venda(cliente, medicamentos)
+                _venda.datatime = venda['data_hora']
+
+                self._vendas[venda["id"]] = _venda
+
 
     def carregar_dados(self, path: str):
         self.carregar_laboratorios(path)
@@ -127,4 +149,5 @@ class Farmacia:
             json.dump(quimioterapicos, file, indent=4)
 
         with open(path + "vendas.json", "w") as file:
-            json.dump(self._vendas, file, indent=4)
+            vendas = [venda.dados_venda for venda in self._vendas.values()]
+            json.dump(vendas, file, indent=4)

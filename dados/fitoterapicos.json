@@ -38,5 +38,13 @@
         "laboratorio": "HerbEssentials",
         "descricao": "Alivia problemas digestivos e gases.",
         "preco": 8.99
+    },
+    {
+        "id": 11,
+        "nome": "medicamentocaro",
+        "principal_composto": "dinheiro",
+        "laboratorio": "qualquer",
+        "descricao": "tantofaz",
+        "preco": 170.0
     }
 ]

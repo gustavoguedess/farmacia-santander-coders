@@ -43,5 +43,14 @@
         "descricao": "Ansiol\u00edtico para transtornos de ansiedade.",
         "preco": 22.0,
         "controlado": true
+    },
+    {
+        "id": 10,
+        "nome": "batatinha",
+        "principal_composto": "batata",
+        "laboratorio": "AIrfryer",
+        "descricao": "um remedio delicioso",
+        "preco": 5.0,
+        "controlado": true
     }
 ]

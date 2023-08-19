@@ -1,4 +1,4 @@
-import json
+from datetime import datetime 
 
 class Cliente:
     def __init__(self, cpf: str, nome: str, sobrenome: str, data_nascimento: str):
@@ -8,7 +8,7 @@ class Cliente:
         self._data_nascimento: str = data_nascimento
 
     def __str__(self):
-        return f"{self.cpf} - {self._nome} - {self._sobrenome} - {self._data_nascimento}"
+        return f"{self.cpf} - {self._nome} {self._sobrenome} - {self._data_nascimento} - {self.idade} anos"
 
     @property
     def dados_cliente(self):
@@ -41,5 +41,11 @@ class Cliente:
 
     @data_nascimento.setter
     def data_nascimento(self, valor):
-        self._data_nascimento = valor        
+        self._data_nascimento = valor
+    
+    @property
+    def idade(self):
+        # diff datetime
+        return (datetime.now() - datetime.strptime(self._data_nascimento, "%d/%m/%Y")).days // 365
+
     

@@ -30,13 +30,11 @@ def cadastrar_laboratorio(farmacia: Farmacia):
 
 def cadastrar_cliente(farmacia: Farmacia):
     nome = input("Digite o nome do cliente: ")
+    sobrenome = input("Digite o sobrenome do cliente: ")
     cpf = input("Digite o CPF do cliente: ")
-    endereco = input("Digite o endereço do cliente: ")
-    telefone = input("Digite o telefone do cliente: ")
-    cidade = input("Digite a cidade do cliente: ")
-    estado = input("Digite o estado do cliente: ")
+    data_nascimento = input("Digite a data de nascimento do cliente: ")
 
-    cliente = Cliente(nome, cpf, endereco, telefone, cidade, estado)
+    cliente = Cliente(cpf, nome, sobrenome, data_nascimento)
     farmacia.add_cliente(cliente)
 
 def cadastrar_medicamento(farmacia: Farmacia):
@@ -68,7 +66,7 @@ def cadastrar_venda(farmacia: Farmacia):
     cpf = input("Digite o CPF do cliente: ")
     id_medicamentos = []
     while True:
-        id_medicamento = int(input("Digite o ID do medicamento: "))
+        id_medicamento = (input("Digite o ID do medicamento: "))
         id_medicamentos.append(id_medicamento)
         op = input("Deseja adicionar mais um medicamento (S/N): ")
         op = op.upper()

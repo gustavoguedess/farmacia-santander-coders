@@ -12,7 +12,7 @@ class Medicamento:
         self._id = next(self.id_iter)
     
     def __str__(self):
-        return f"{self._nome} - {self._principal_composto} - {self._laboratorio} - {self._descricao} - {self._preco} - {self._id}"
+        return f"{self._id} - {self._nome} - {self._principal_composto} - {self._laboratorio} - {self._descricao} - {self._preco}"
     
     @property
     def dados_medicamento(self):
@@ -68,14 +68,5 @@ class Medicamento:
         self._descricao = descricao
         
     @preco.setter
-    def preco(self, descricao):
+    def preco(self, preco):
         self._preco = preco
-        
-    # Outras funções
-    def to_string(self):
-        print(f"Nome: {self._nome}")
-        print(f"Principal composto: {self._principal_composto}")
-        print(f"Laboratório: {self._laboratorio}")
-        print(f"Descrição: {self._descricao}")
-        print(f"Preço: {self._preco}")
-        print(f"ID: {self._id}")
