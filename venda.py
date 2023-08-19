@@ -70,7 +70,7 @@ class Venda:
 
         for medicamento in self.medicamentos:
             if isinstance(medicamento, MedicamentoQuimioterapico) and medicamento.controlado:
-                print(f"O produto {produto.nome} é controlado!")
+                print(f"O produto {medicamento.nome} é controlado!")
                 possui_controlados = True
 
         return possui_controlados
