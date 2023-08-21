@@ -25,12 +25,17 @@ Para executar o código é necessário rodar o comando `python main.py`. Primeir
 
 Esses dados estão localizados no diretório `dados/`. Em seguida a função `main` é chamada, ela é responsável pela geração de um menu com 6 opções:
 
-- Opção 01: responsável por chamar a função cadastrar_laboratorio
-- Opção 02: responsável por chamar a função cadastrar_cliente
-- Opção 03: responsável por chamar a função cadastrar_medicamento
-- Opção 04: responsável por chamar a função cadastrar_venda
-- Opção 05: responsável por chamar a função listar_informacoes
-- Opção 06: responsável por encerrar o menu interativo (break)
+- Opção 01: responsável por chamar a função cadastrar_laboratorio() permite o cadastro de um novo laboratório
+- Opção 02: responsável por chamar a função cadastrar_cliente() possibilita o cadastro de um novo cliente
+- Opção 03: responsável por chamar a função cadastrar_medicamento() permite o cadastro de novos medicamentos
+- Opção 04: responsável por chamar a função cadastrar_venda() que permite o registro de uma nova venda
+- Opção 05: responsável por chamar a função clientes() para listar os nomes dos clientes em ordem alfabética
+- Opção 06: responsável por chamar a função medicamentos() para listar medicamentos em ordem alfabética
+- Opção 07: responsável por chamar a função mediamentos_quimioterapicos() para listar medicamentos Quimioterapicos em ordem alfabética
+- Opção 08: responsável por chamar a função medicamentos_fitoterapicos() para listar medicamentos Fitoterapicos em ordem alfabética
+- Opção 09: responsável por chamar a função listar_estatisticas() para listar as estatísticas das vendas do dia
+- Opção 10: responsável por chamar a função listar_informacoes() lista todos os medicamentos, laboratórios e clientes
+- Opção 11: responsável por encerrar o menu interativo (break)
 
 ### Laboratório
 
