@@ -69,16 +69,16 @@ def cadastrar_medicamento(farmacia: Farmacia):
 
 def cadastrar_venda(farmacia: Farmacia):
     cpf = input("Digite o CPF do cliente: ")
-    id_medicamentos = []
+    nome_medicamentos = []
     while True:
-        id_medicamento = (input("Digite o Nome do medicamento: "))
-        id_medicamentos.append(id_medicamento)
+        nome_medicamento = (input("Digite o Nome do medicamento: "))
+        nome_medicamentos.append(nome_medicamento)
         op = input("Deseja adicionar mais um medicamento (S/N): ")
         op = op.upper()
         if op == "N":
             break
 
-    farmacia.vender(cpf, id_medicamentos)
+    farmacia.vender(cpf, nome_medicamentos)
 
 def listar_informacoes(farmacia: Farmacia):
     print(farmacia)
