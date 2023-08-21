@@ -5,18 +5,18 @@ from datetime import datetime
 
 class Venda:
     proximo_id = 0
-    def __init__(self, cliente: Cliente, medicamentos: list[Medicamento]):
+    def __init__(self, cliente: Cliente, medicamentos: list[Medicamento], novo: bool=True):
         self._id = Venda.proximo_id
         Venda.proximo_id += 1
         self.cliente = cliente
         self.medicamentos = medicamentos
-        self._datetime = None
+        self._datetime = datetime.now()
+        self._novo = novo
 
         self.calcular_total(desconto=0.0)
-        self.efetuar_compra()
 
     def __str__(self):
-        str_venda = ""
+        str_venda = "\n"
         str_venda += f"ID: {self.id}\n"
         str_venda += f"Cliente: {self.cliente}\n"
         str_venda += f"Medicamentos:\n"
@@ -25,9 +25,13 @@ class Venda:
         str_venda += f"Valor: {self.valor}\n"
         str_venda += f"Desconto: {self.desconto}\n"
         str_venda += f"Valor Total: {self.valor_total}\n"
-        str_venda += f"Data e Hora: {self.datatime}\n"
+        str_venda += f"Data e Hora: {self.datetime}\n"
         return str_venda
     
+    @property
+    def novo(self):
+        return self._novo
+
     @property
     def dados_venda(self):
         return {
@@ -45,12 +49,12 @@ class Venda:
         return self._id
     
     @property
-    def datatime(self):
-        return self._datatime
+    def datetime(self):
+        return self._datetime
     
-    @datatime.setter
-    def datatime(self, datatime):
-        self._datatime = str(datatime)
+    @datetime.setter
+    def datetime(self, datetime):
+        self._datetime = str(datetime)
 
     def verificar_produto(self, id_produto: int):
         verificado = False
@@ -61,7 +65,6 @@ class Venda:
         return verificado
 
     def efetuar_compra(self):
-        self.datatime = datetime.now()
         print("Compra efetuada com sucesso!")
     
     @property

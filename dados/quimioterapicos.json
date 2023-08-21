@@ -1,6 +1,6 @@
 [
     {
-        "id": 5,
+        "id": 6,
         "nome": "Amoxicilina",
         "principal_composto": "Amoxicilina",
         "laboratorio": "PharmaCare",
@@ -9,7 +9,7 @@
         "controlado": false
     },
     {
-        "id": 6,
+        "id": 7,
         "nome": "Lisinopril",
         "principal_composto": "Lisinopril",
         "laboratorio": "HeartMed",
@@ -18,7 +18,7 @@
         "controlado": false
     },
     {
-        "id": 7,
+        "id": 8,
         "nome": "Ibuprofeno",
         "principal_composto": "Ibuprofeno",
         "laboratorio": "PainRelief",
@@ -27,7 +27,7 @@
         "controlado": false
     },
     {
-        "id": 8,
+        "id": 9,
         "nome": "Levothyroxine",
         "principal_composto": "Levothyroxine",
         "laboratorio": "ThyroidPharm",
@@ -36,7 +36,7 @@
         "controlado": false
     },
     {
-        "id": 9,
+        "id": 10,
         "nome": "Alprazolam",
         "principal_composto": "Alprazolam",
         "laboratorio": "MentalHealth",
@@ -45,8 +45,8 @@
         "controlado": true
     },
     {
-        "id": 10,
-        "nome": "batatinha",
+        "id": 11,
+        "nome": "Batatinha",
         "principal_composto": "batata",
         "laboratorio": "AIrfryer",
         "descricao": "um remedio delicioso",

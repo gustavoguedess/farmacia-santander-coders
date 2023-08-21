@@ -49,6 +49,123 @@ class Farmacia:
         return str_medicamentos
     
     @property
+    def medicamentos_fitoterapicos(self):
+        medicamentos_fitoterapicos = []
+        for medicamento in self._medicamentos.values():
+            if isinstance(medicamento, MedicamentoFitoterapico):
+                medicamentos_fitoterapicos.append(medicamento.nome)
+        
+        medicamentos_fitoterapicos.sort()
+
+        medicamentos_str = ""
+        for medicameont in medicamentos_fitoterapicos:
+            medicamentos_str += str(self._medicamentos[medicamento]) + "\n"
+        
+        return medicamentos_str
+
+    @property
+    def medicamentos_quimioterapicos(self):
+        medicamentos_quimioterapicos = []
+        for medicamento in self._medicamentos.values():
+            if isinstance(medicamento, MedicamentoQuimioterapico):
+                medicamentos_quimioterapicos.append(medicamento.nome)
+        
+        medicamentos_quimioterapicos.sort()
+
+        medicamentos_str = ""
+        for medicamento in medicamentos_quimioterapicos:
+            medicamentos_str += str(self._medicamentos[medicamento]) + "\n"
+        
+        return medicamentos_str
+
+    @property
+    def remedio_mais_vendido(self):
+        remedios_vendidos = {}
+
+        for venda in self._vendas.values():
+            if venda.novo:
+                for medicamento in venda.medicamentos:
+                    if medicamento.nome in remedios_vendidos:
+                        remedios_vendidos[medicamento.nome] += 1
+                    else:
+                        remedios_vendidos[medicamento.nome] = 1
+        
+        mais_vendido = ""
+        quantidade = 0
+        for remedio, quantidade_vendida in remedios_vendidos.items():
+            if quantidade_vendida > quantidade:
+                mais_vendido = remedio
+                quantidade = quantidade_vendida
+
+        if mais_vendido == "":
+            return "Nenhum remédio foi vendido!"
+
+        total = quantidade * self._medicamentos[mais_vendido].preco
+        str_remedios_vendidos = f"O remédio mais vendido foi {mais_vendido} com {quantidade} vendas. R$ {total}"
+        return str_remedios_vendidos
+    
+    @property
+    def quantidade_pessoas_atendidas(self):
+        pessoas_atendidas = set()
+        for venda in self._vendas.values():
+            if venda.novo:
+                pessoas_atendidas.add(venda.cliente.cpf)
+        return len(pessoas_atendidas)
+    
+    @property
+    def numero_fitoterapicos_vendidos(self):
+        fitoterapicos_vendidos = []
+        for venda in self._vendas.values():
+            if venda.novo:
+                for medicamento in venda.medicamentos:
+                    if isinstance(medicamento, MedicamentoFitoterapico):
+                        fitoterapicos_vendidos.append(medicamento.nome)
+        return len(fitoterapicos_vendidos)
+    
+    @property
+    def valor_total_venda_fitoterapicos(self):
+        valor_total = 0
+        for venda in self._vendas.values():
+            if venda.novo:
+                for medicamento in venda.medicamentos:
+                    if isinstance(medicamento, MedicamentoFitoterapico):
+                        valor_total += medicamento.preco
+        return valor_total
+    
+    @property
+    def numero_quimioterapicos_vendidos(self):
+        quimioterapicos_vendidos = []
+        for venda in self._vendas.values():
+            if venda.novo:
+                for medicamento in venda.medicamentos:
+                    if isinstance(medicamento, MedicamentoQuimioterapico):
+                        quimioterapicos_vendidos.append(medicamento.nome)
+        return len(quimioterapicos_vendidos)
+
+    @property
+    def valor_total_venda_quimioterapicos(self):
+        valor_total = 0
+        for venda in self._vendas.values():
+            if venda.novo:
+                for medicamento in venda.medicamentos:
+                    if isinstance(medicamento, MedicamentoQuimioterapico):
+                        valor_total += medicamento.preco
+        return valor_total
+    
+    @property
+    def estatisticas(self):
+        str_estatisticas = ""
+        str_estatisticas += f"{self.remedio_mais_vendido}\n"
+        str_estatisticas += f"Quantidade de pessoas atendidas: {self.quantidade_pessoas_atendidas}\n"
+        str_estatisticas += f"Numero de fitoterapicos vendidos: {self.numero_fitoterapicos_vendidos}\n"
+        str_estatisticas += f"Valor total de venda de fitoterapicos: {self.valor_total_venda_fitoterapicos}\n"
+        str_estatisticas += f"Numero de quimioterapicos vendidos: {self.numero_quimioterapicos_vendidos}\n"
+        str_estatisticas += f"Valor total de venda de quimioterapicos: {self.valor_total_venda_quimioterapicos}\n"
+        
+        return str_estatisticas
+
+
+    @property
     def vendas(self):
         str_vendas = ""
         for venda in self._vendas.values():
@@ -71,6 +188,7 @@ class Farmacia:
             medicamentos.append(self._medicamentos[id_medicamento])
         venda = Venda(cliente, medicamentos)
 
+        print('\n=-=-=-=-=-=-=-=-=-=-=-=- COMPRA -=-=-=-=-=-=-=-=-=-=-=-=-=\n')
         print(venda)
 
         if venda.possui_controlado:
@@ -85,6 +203,7 @@ class Farmacia:
             venda.efetuar_compra()
             self._vendas[venda.id] = venda
 
+        print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
         return venda
     
     def carregar_laboratorios(self, path: str):
@@ -118,7 +237,7 @@ class Farmacia:
                 medicamentos = []
                 for id_medicamento in venda["medicamentos"]:
                     medicamentos.append(self._medicamentos[id_medicamento])
-                _venda = Venda(cliente, medicamentos)
+                _venda = Venda(cliente, medicamentos, novo=False)
                 _venda.datatime = venda['data_hora']
 
                 self._vendas[venda["id"]] = _venda

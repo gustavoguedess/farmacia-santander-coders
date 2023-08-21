@@ -11,9 +11,14 @@ def menu():
     print("2 - Cadastrar Cliente")
     print("3 - Cadastrar Medicamento")
     print("4 - Cadastrar Venda")
-    print("5 - Listar Informações")
-    print("6 - Sair")
-    
+    print("5 - Listar clientes")
+    print("6 - Listar medicamentos")
+    print("7 - Listar medicamentos Quimioterapicos")
+    print("8 - Listar medicamentos Fitoterapicos")
+    print("9 - Listar estatisticas")
+    print("10 - Listar Informações")
+    print("11 - Sair")
+
     op = int(input("Digite a opção desejada: "))
     
     return op
@@ -66,7 +71,7 @@ def cadastrar_venda(farmacia: Farmacia):
     cpf = input("Digite o CPF do cliente: ")
     id_medicamentos = []
     while True:
-        id_medicamento = (input("Digite o ID do medicamento: "))
+        id_medicamento = (input("Digite o Nome do medicamento: "))
         id_medicamentos.append(id_medicamento)
         op = input("Deseja adicionar mais um medicamento (S/N): ")
         op = op.upper()
@@ -93,8 +98,23 @@ def main():
         elif op == 4:
             cadastrar_venda(farmacia)
         elif op == 5:
-            listar_informacoes(farmacia)
+            print("\n\nClientes:")
+            print(farmacia.clientes)
         elif op == 6:
+            print("\n\nMedicamentos:")
+            print(farmacia.medicamentos)
+        elif op == 7:
+            print("\n\nMedicamentos Quimioterapicos:")
+            print(farmacia.medicamentos_quimioterapicos)
+        elif op == 8:
+            print("\n\nMedicamentos Fitoterapicos:")
+            print(farmacia.medicamentos_fitoterapicos)
+        elif op == 9:
+            print("\n\nEstatisticas do dia:")
+            print(farmacia.estatisticas)
+        elif op == 10:
+            listar_informacoes(farmacia)
+        elif op == 11:
             break
     
     farmacia.salvar_dados(BANCO_DE_DADOS)

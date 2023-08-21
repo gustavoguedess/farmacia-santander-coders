@@ -22,5 +22,13 @@
         "telefone": "12345678",
         "cidade": "curitiba",
         "estado": "paran\u00e1"
+    },
+    {
+        "id": 3,
+        "nome": "testelab",
+        "endereco": "rua dos bobos",
+        "telefone": "12345",
+        "cidade": "maceio",
+        "estado": "alagoas"
     }
 ]

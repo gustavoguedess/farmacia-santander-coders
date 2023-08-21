@@ -3,7 +3,7 @@
         "id": 0,
         "cpf_cliente": "023",
         "medicamentos": [
-            "batatinha"
+            "Batatinha"
         ],
         "valor": 5.0,
         "desconto": 0.0,
@@ -14,14 +14,26 @@
         "id": 1,
         "cpf_cliente": "023",
         "medicamentos": [
-            "batatinha",
-            "batatinha",
-            "batatinha",
-            "batatinha"
+            "Batatinha",
+            "Batatinha",
+            "Batatinha",
+            "Batatinha"
         ],
         "valor": 20.0,
         "desconto": 0.0,
         "valor_total": 20.0,
         "data_hora": "2023-08-18 22:09:52.636818"
+    },
+    {
+        "id": 2,
+        "cpf_cliente": "123",
+        "medicamentos": [
+            "Alprazolam",
+            "Ginkgo Biloba"
+        ],
+        "valor": 41.75,
+        "desconto": 0.0,
+        "valor_total": 41.75,
+        "data_hora": "2023-08-21 19:44:03.177952"
     }
 ]
