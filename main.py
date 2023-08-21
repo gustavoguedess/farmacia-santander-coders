@@ -117,6 +117,8 @@ def main():
         elif op == 11:
             break
     
+    print("Estatisitcas do dia:")
+    print(farmacia.estatisticas)
     farmacia.salvar_dados(BANCO_DE_DADOS)
     
 
