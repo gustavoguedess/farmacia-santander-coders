@@ -89,32 +89,32 @@ def main():
     while True:
         op = menu()
 
-        if op == 1:
+        if op == 1: # Cadastrar Laboratório
             cadastrar_laboratorio(farmacia)
-        elif op == 2:
+        elif op == 2: # Cadastrar Cliente
             cadastrar_cliente(farmacia)
-        elif op == 3:
+        elif op == 3: # Cadastrar Medicamento
             cadastrar_medicamento(farmacia)
-        elif op == 4:
+        elif op == 4: # Cadastrar Venda
             cadastrar_venda(farmacia)
-        elif op == 5:
+        elif op == 5: # Listar clientes
             print("\n\nClientes:")
             print(farmacia.clientes)
-        elif op == 6:
+        elif op == 6: # Listar medicamentos
             print("\n\nMedicamentos:")
             print(farmacia.medicamentos)
-        elif op == 7:
+        elif op == 7: # Listar medicamentos Quimioterapicos
             print("\n\nMedicamentos Quimioterapicos:")
             print(farmacia.medicamentos_quimioterapicos)
-        elif op == 8:
+        elif op == 8: # Listar medicamentos Fitoterapicos
             print("\n\nMedicamentos Fitoterapicos:")
             print(farmacia.medicamentos_fitoterapicos)
-        elif op == 9:
+        elif op == 9: # Listar estatisticas
             print("\n\nEstatisticas do dia:")
             print(farmacia.estatisticas)
-        elif op == 10:
+        elif op == 10: # Listar Informações
             listar_informacoes(farmacia)
-        elif op == 11:
+        elif op == 11: # Sair
             break
     
     print("Estatisitcas do dia:")
