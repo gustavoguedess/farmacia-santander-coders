@@ -41,7 +41,7 @@ class Venda:
             "valor": self.valor,
             "desconto": self.desconto,
             "valor_total": self.valor_total,
-            "data_hora": self.datatime
+            "data_hora": str(self.datetime)
         }
 
     @property
